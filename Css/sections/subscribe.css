@@ -1,0 +1,119 @@
+.subscribe {
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 64px;
+  background-image: url(/assets/subscribe_bg.png);
+  background-size: contain;
+  text-align: center;
+  line-height: 5.7;
+}
+
+@media (max-width: 550px) {
+  .subscribe {
+    padding: 31px;
+    gap: 30px;
+  }
+}
+.subscribe h1 {
+  color: var(--color-white);
+  font-family: var(--playfair-display);
+  font-size: 88px;
+  max-width: 700px;
+  padding: 0;
+  margin: 0;
+  line-height: 123px;
+}
+@media (max-width: 550px) {
+  .subscribe h1 {
+    font-size: 60px;
+  }
+}
+.subscribe p {
+  font-family: var(--plus-jakarta-sans);
+  color: #eed6d7;
+  font-size: 18px;
+}
+@media (max-width: 550px) {
+  .subscribe p {
+    line-height: 2.6;
+  }
+}
+.subscribe form {
+  position: relative;
+  margin: 20px 0;
+  border: 1px solid #ffffff80;
+  border-radius: 56px;
+  display: flex;
+  align-items: center;
+  padding: 16px 25px;
+  gap: 50px;
+}
+@media (max-width: 550px) {
+  .subscribe form {
+    border: none;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 43px;
+    border-radius: 0;
+    margin: 0;
+  }
+}
+.subscribe form [type="email"] {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: white;
+  letter-spacing: 1.2px;
+  background-color: var(--primary-color);
+  display: flex;
+  caret-color: var(--color-white);
+  min-width: 230px;
+}
+.subscribe form [type="email"]::placeholder {
+  color: #c47377;
+}
+.subscribe form [type="email"]:focus::placeholder {
+  color: transparent;
+  transition: 0.3s;
+}
+
+@media (max-width: 550px) {
+  .subscribe form [type="email"] {
+    width: 110%;
+    border: 1px solid #ffffff85;
+    padding: 17px 29px;
+    min-width: 250px;
+    font-size: 15px;
+    border-radius: 38px;
+    text-align: start;
+  }
+}
+.subscribe form [type="submit"] {
+  background-color: var(--black-400);
+  border: none;
+  padding: 22px 33px;
+  outline: none;
+  border-radius: 61px;
+  color: var(--color-creamson);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  letter-spacing: 1px;
+  font-family: var(--plus-jakarta-sans);
+  font-weight: 600;
+}
+@media (max-width: 550px) {
+  .subscribe form [type="submit"] {
+    border: none;
+    min-width: 250px;
+    font-size: 15px;
+    border-radius: 38px;
+    width: 110%;
+    padding: 20px 40px;
+  }
+}

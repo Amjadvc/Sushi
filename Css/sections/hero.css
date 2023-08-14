@@ -1,0 +1,209 @@
+.hero {
+  display: flex;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.hero .image {
+  position: relative;
+  flex: 0.82;
+}
+.hero .image .img-overlay {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--primary-color);
+  z-index: -1;
+}
+
+.hero .image img {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-39%, -50%);
+  width: 120%;
+  height: 100%;
+  z-index: 3;
+  object-fit: contain;
+}
+@media (max-width: 1060px) {
+  .hero .image img {
+    transform: translate(-50%, -3%) rotateY(45deg) scale(1.3);
+    width: 100%;
+  }
+}
+.hero .image h2 {
+  position: absolute;
+  bottom: 0;
+  font-size: 110px;
+  color: white;
+  padding: 23px;
+  line-height: 1.2;
+}
+@media screen and (max-width: 750px) {
+  .hero .image h2 {
+    font-size: 70px;
+    line-height: 90px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .hero .image h2 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+}
+.hero .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+}
+.hero .content .info {
+  padding: 64px;
+  position: relative;
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+}
+@media screen and (max-width: 550px) {
+  .hero .content .info {
+    padding: 64px 64px 64px 20px;
+  }
+}
+
+.hero .content .header h1 {
+  font-size: 80px;
+  font-family: var(--playfair-display);
+}
+@media screen and (max-width: 550px) {
+  .hero .content .header h1 {
+    font-size: 60px;
+  }
+}
+.hero .content .header p {
+  padding: 30px 25px 0px;
+  font-family: var(--plus-jakarta-sans);
+  font-size: 19px;
+  color: var(--secondary-color);
+}
+@media screen and (max-width: 550px) {
+  .hero .content .header p {
+    padding: 30px 0px 0px;
+  }
+}
+.hero .content .boutons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family: var(--plus-jakarta-sans);
+  gap: 54px;
+}
+@media screen and (max-width: 550px) {
+  .hero .content .boutons {
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+  }
+}
+
+.hero .content .boutons .boutton-one a {
+  background-color: var(--secondary-color);
+  padding: 20px 56px;
+  border-radius: 33px;
+  color: white;
+  font-size: 18px;
+  display: block;
+  font-weight: 500;
+}
+@media screen and (max-width: 550px) {
+  .hero .content .boutons .boutton-one a {
+    border-radius: 5px 30px 30px 5px;
+  }
+}
+
+.hero .content .boutons .boutton-two a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero .content .boutons .boutton-two a img {
+  width: 46px;
+  margin-right: 10px;
+}
+.hero .content .boxes {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  background: var(--color-white);
+  padding: 35px 60px;
+  font-family: var(--playfair-display);
+  width: 100%;
+}
+@media screen and (max-width: 550px) {
+  .hero .content .boxes {
+    padding: 35px 6px;
+    gap: 40px;
+    flex-direction: column;
+  }
+}
+.hero .content .boxes::before {
+  content: "";
+  position: absolute;
+  height: 59%;
+  width: 0.1px;
+  background-color: rgba(2, 2, 2, 0.1);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 550px) {
+  .hero .content .boxes::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 80%;
+    background-color: rgba(2, 2, 2, 0.1);
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.hero .content .boxes .box-one,
+.hero .content .boxes .box-two {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px;
+  flex: 1;
+  min-width: 200px;
+  font-family: var(--plus-jakarta-sans);
+}
+.hero .content .boxes .box-one h4 {
+  font-size: 60px;
+  font-weight: 300;
+  font-family: var(--playfair-display);
+}
+.hero .content .boxes .box-one p {
+  color: #888888;
+  font-size: 16px;
+}
+
+.hero .content .boxes .box-two {
+  justify-content: center;
+  font-size: 14px;
+}
+.hero .content .boxes .box-two img {
+  width: 50px;
+  height: 50px;
+}
+.hero .content .boxes .box-two p {
+  line-height: 2;
+  color: #888888;
+  font-size: 12px;
+}

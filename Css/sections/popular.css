@@ -1,0 +1,189 @@
+.popular {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("/assets/popular_bg.png");
+  padding: 64px;
+  gap: 56px;
+  text-align: center;
+}
+
+@media (max-width: 550px) {
+  .popular {
+    padding: 64px 20px;
+  }
+}
+
+.popular h3 {
+  font-size: 70px;
+  color: var(--color-white);
+  margin-bottom: 10px;
+}
+.popular .boutons-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 30px;
+  overflow-x: auto;
+  width: 100%;
+}
+@media (max-width: 550px) {
+  .popular .boutons-filter {
+    gap: 10px;
+  }
+}
+.popular .boutons-filter::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.popular .boutons-filter button {
+  font-size: 16px;
+  display: flex;
+  font-family: var(--plus-jakarta-sans);
+  justify-content: center;
+  align-items: center;
+  padding: 0px 25px;
+  border-radius: 100px;
+  height: 60px;
+  color: var(--color-white);
+  outline: none;
+  border: 1px solid #fff0de47;
+  background-color: #fcfcfc0a;
+  cursor: pointer;
+}
+.popular .boutons-filter .active {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+.popular .boutons-filter button:hover {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+@media (max-width: 550px) {
+  .popular .boutons-filter button {
+    font-size: 16px;
+    padding: 5px 15px;
+    height: 47px;
+    border-radius: 20px;
+  }
+}
+
+.popular .boutons-filter button img {
+  width: 35px;
+  margin-right: 10px;
+}
+.popular .boxes {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 50px;
+  padding: 40px 0;
+  flex-wrap: wrap;
+}
+.popular .boxes .box {
+  border: 1px solid #fff0de47;
+  background-color: #fcfcfc0a;
+  height: fit-content;
+  border-radius: 40px;
+  line-height: 2;
+  font-size: 28px;
+  padding: 38px;
+  min-width: 260px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 550px) {
+  .popular .boxes .box {
+    padding: 38px 20px;
+    width: 95%;
+    max-width: 300px;
+  }
+}
+.popular .boxes .box.one,
+.popular .boxes .box.three {
+  color: var(--color-white);
+}
+.popular .boxes .box.two {
+  background-color: var(--color-white);
+  font-family: var(--playfair-display);
+  min-width: 340px;
+}
+@media (max-width: 550px) {
+  .popular .boxes .box.two {
+    min-width: 260px;
+  }
+}
+.popular .boxes .box h4 {
+  margin: 28px 0 7px;
+}
+.popular .boxes .box.two h4 {
+  font-size: 32px;
+  color: var(--black-500);
+}
+.popular .boxes .box.one > img,
+.popular .boxes .box.three > img {
+  width: 110px;
+  height: 84px;
+}
+.popular .boxes .box.two > img {
+  width: 214px;
+  height: 160px;
+}
+
+.popular .boxes .box .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  font-family: var(--plus-jakarta-sans);
+  gap: 70px;
+}
+.popular .boxes .box .info span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popular .boxes .box .info span:last-child {
+  font-weight: 500;
+}
+.popular .boxes .box.two .info span:last-child {
+  color: var(--secondary-color);
+  font-size: 24px;
+}
+.popular .boxes .box.two .info span:first-child {
+  color: var(--gray-100);
+  font-size: 26px;
+}
+.popular .boxes .box .info span img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-right: 4px;
+}
+
+.popular .buton button {
+  margin: 0 auto;
+  border: none;
+  border-radius: 54px;
+  outline: none;
+  display: flex;
+  align-items: center;
+  padding: 20px 38px;
+  font-weight: 500;
+  font-size: 18px;
+  font-family: var(--plus-jakarta-sans);
+  color: var(--color-white);
+  background-color: var(--secondary-color);
+  cursor: pointer;
+}
+.popular .buton button img {
+  width: 15px;
+  margin-left: 18px;
+  object-fit: contain;
+}

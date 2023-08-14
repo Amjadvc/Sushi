@@ -1,0 +1,239 @@
+.trending {
+  position: relative;
+  overflow: hidden;
+}
+.trending.Food,
+.trending.drinck {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+@media (max-width: 1024px) {
+  .trending.Food {
+    flex-direction: column;
+  }
+}
+@media (max-width: 550px) {
+  .trending.drinck {
+    flex-direction: column-reverse;
+  }
+}
+.trending.Food .box,
+.trending.drinck .box {
+  padding: 90px 60px;
+  /* min-height: 640px; */
+  flex: 1;
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+@media (max-width: 1024px) {
+  .trending.Food .box,
+  .trending.drinck .box {
+    min-height: 0;
+  }
+}
+@media (max-width: 1024px) {
+  .trending.Food .box {
+    padding: 30px 60px;
+  }
+}
+@media (max-width: 550px) {
+  .trending.Food .box {
+    padding: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .trending.drinck .box {
+    padding: 30px;
+  }
+}
+.trending.Food .box.content,
+.trending.drinck .box.content {
+  flex-direction: column;
+}
+.trending.Food .box.two {
+  align-items: center;
+
+  background-image: url(/assets/japanese_sushi.png);
+  object-fit: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--color-white);
+  background-position: center;
+}
+@media (max-width: 1024px) {
+  .trending.Food .box.two {
+    background-position: right;
+  }
+}
+.box.two > img,
+.box.three > img {
+  width: 250px;
+  height: 260px;
+  object-fit: contain;
+}
+@media (max-width: 767px) {
+  .box.three > img {
+    width: 150px;
+    height: 200px;
+  }
+  .box.two > img {
+    width: 220px;
+  }
+}
+@media (max-width: 550px) {
+  .box.two > img {
+    width: 200px;
+  }
+}
+
+.box.content > p:first-of-type {
+  font-size: 18px;
+  font-family: var(--plus-jakarta-sans);
+  font-weight: 400;
+  opacity: 0.8;
+  color: var(--primary-color);
+  letter-spacing: -0.01em;
+}
+.box.content > h2 {
+  font-size: 60px;
+  font-family: var(--playfair-display);
+  font-weight: 600;
+  padding: 50px 0;
+}
+
+@media (max-width: 1024px) {
+  .trending .content.four h2,
+  .trending .content.one h2 {
+    padding: 32px 0;
+  }
+}
+
+.box.content > p:last-of-type {
+  font-size: 18px;
+  color: var(--black-500);
+  font-family: var(--plus-jakarta-sans);
+}
+
+.box.content .links {
+  font-size: 18px;
+  font-family: var(--plus-jakarta-sans);
+  padding: 50px 0;
+}
+@media (max-width: 550px) {
+  .trending .boxes .box.content .links {
+    padding: 32px 0;
+  }
+}
+
+.trending .content .links ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(216px, 1fr));
+  gap: 15px;
+}
+
+.trending .content .links li {
+  display: flex;
+  align-items: center;
+}
+.trending .content .links li img {
+  background: var(--primary-color);
+  border-radius: 50%;
+  padding: 6px;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 12px;
+}
+.trending .content .links li p {
+  font-size: 16px;
+  font-family: var(--plus-jakarta-sans);
+  font-weight: 500;
+}
+
+.trending.drinck .box.three {
+  background-color: var(--color-white);
+  align-items: center;
+}
+
+.trending .shap1 img {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.trending .shap2 img {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
+@media (max-width: 1151px) {
+  .trending .shap1 img {
+    width: 70%;
+    transform: translate(-65%, -50%) rotate(180deg);
+  }
+}
+@media (max-width: 1151px) {
+  .trending .shap2 img {
+    width: 70%;
+    transform: translate(-35%, -50%) rotate(180deg);
+  }
+}
+
+.trending .shap3 img {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.trending .shap4 img {
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.trending__discover {
+  position: absolute;
+  top: 44%;
+  left: 44%;
+  z-index: 1;
+
+  width: 160px;
+  height: 160px;
+
+  border-radius: 100%;
+  background-color: var(--secondary-color);
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trending__discover p {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: var(--plus-jakarta-sans);
+
+  text-transform: uppercase;
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .trending .shap1 img,
+  .trending .shap2 img,
+  .trending .shap3 img,
+  .trending .shap4 img,
+  .trending .trending__discover {
+    display: none;
+  }
+}
